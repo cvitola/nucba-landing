@@ -127,7 +127,9 @@ body{
     padding: 10px;
     border: 2px solid #fcdb00;
     border-radius: 10px;
-  
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 .ficha{
     padding: 8px;
@@ -212,4 +214,19 @@ body{
 @keyframes rotar {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
+}
+/* responsivo -- no entiendo */
+@media screen and (max-width: 500px) {
+    .contenido{
+        grid-template-columns: [col1] 100%;
+        grid-template-rows: [fil1] 100%;
+    }
+    .personajes-arriba{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
